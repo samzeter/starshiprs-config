@@ -1,0 +1,30 @@
+# Use custom format
+format = """
+$directory$rust$package [➜ ](bold green)
+"""
+
+# Replace the "❯" symbol in the prompt with "❯❯"
+[character]
+format = "[❯❯](bold green) "
+success_symbol = "[❯❯](bold green) "
+error_symbol = "[❯❯](bold red) "
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Disable the AWS module.
+[aws]
+disabled = true
+# Directory setttings
+[directory]
+format = "[$path]($style)"#[$read_only]($read_only_style)
+truncation_length = 4
+truncate_to_repo = false
+truncation_symbol = "…/"
+
+[username]
+disabled = true
+# Workaround for slow prompt with git status
+[git_status]
+disabled = true
